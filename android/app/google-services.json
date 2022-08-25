@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "664397037694",
+    "project_id": "weconnect-social-network",
+    "storage_bucket": "weconnect-social-network.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:664397037694:android:3826210b075d37ea06582f",
+        "android_client_info": {
+          "package_name": "com.example.weconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "664397037694-u6r8udi5dgt7a2le8rlislnsc93ncjvg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaOPFKVA2nfydctNuduJwvLGbFFJ1jqlk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "664397037694-u6r8udi5dgt7a2le8rlislnsc93ncjvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
