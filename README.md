@@ -14,6 +14,7 @@
 ![home-view](https://user-images.githubusercontent.com/97756428/186726245-f60a3e0d-2900-46c2-8a34-bf336fc9499f.png)
 
 ![createpost-view](https://user-images.githubusercontent.com/97756428/186726353-7f4894c8-1993-4031-bfd7-b4ed9423ef45.png)
+
 После чего этот пост отобразиться на главном экране и здесь с права от имени пользователя есть иконка чата , нажимаем на нее и переходим на экран чата, можно переписываться
 ![post-display](https://user-images.githubusercontent.com/97756428/186726631-9a61f102-a5db-4495-a9d7-46ec4057f8f0.png)
 
