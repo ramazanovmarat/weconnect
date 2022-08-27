@@ -75,6 +75,7 @@ class _HomeTabViewState extends State<HomeTabView> {
                 itemBuilder: (context, index) {
 
                 final QueryDocumentSnapshot doc = snapshot.data!.docs[index];
+
                 final Post post = Post(
                   imageURL: doc["imageUrl"],
                   userName: doc["userName"],
@@ -83,8 +84,6 @@ class _HomeTabViewState extends State<HomeTabView> {
                   description: doc["description"],
                   timestamp: doc["timestamp"]
                 );
-
-
 
                 return Padding(
                   padding: const EdgeInsets.all(8.0),

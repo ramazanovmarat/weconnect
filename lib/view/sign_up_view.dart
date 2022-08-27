@@ -41,7 +41,7 @@ class SignUpView extends StatelessWidget {
                   showDialog(
                       context: context,
                       builder: (context) =>
-                          const VerificationDialog(),
+                          VerificationDialog(verificationMessage: state.errorMessage),
                   );
                 } else if(state.isFormValid && !state.isLoading){
                   context.read<AuthenticationBloc>().add(AuthenticationStarted());
@@ -96,7 +96,8 @@ class SignUpView extends StatelessWidget {
 }
 
 class VerificationDialog extends StatelessWidget {
-  const VerificationDialog({Key? key}) : super(key: key);
+  final String? verificationMessage;
+  const VerificationDialog({Key? key, this.verificationMessage}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -105,7 +106,7 @@ class VerificationDialog extends StatelessWidget {
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20)
       ),
-      content: const Text('Вам отправили письмо с потверждением на почту. Пожалуйста, подтвердите свой адрес электронной почты', textAlign: TextAlign.center,),
+      content: Text(verificationMessage!, textAlign: TextAlign.center),
       actions: [
         SizedBox(
           width: double.infinity,
@@ -246,11 +247,11 @@ class _DisplayNameField extends StatelessWidget {
               contentPadding:
               const EdgeInsets.symmetric(vertical: 25.0, horizontal: 10.0),
               border: border,
-              labelText: 'Имя Фамилия',
+              labelText: 'Имя пользователя',
               labelStyle: const TextStyle(color: Constants.kBlackColor),
               errorMaxLines: 2,
               errorText:
-              !state.isNameValid ? 'Имя не может быть пустым!' : null,
+              !state.isNameValid ? 'Имя пользователя не может быть пустым!' : null,
               enabledBorder: OutlineInputBorder(
                   borderSide: const BorderSide(color: Constants.kBlackColor),
                   borderRadius: BorderRadius.circular(20)),
@@ -324,7 +325,7 @@ class _SubmitButton extends StatelessWidget {
             : SizedBox(
                 width: size.width * 0.8,
                 height: size.height / 9.5,
-                child: OutlinedButton(
+                child: ElevatedButton(
                   onPressed: !state.isFormValid
                       ? () => context
                           .read<FormBloc>()

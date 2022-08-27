@@ -3,7 +3,7 @@
 // которое позволит наблюдать за любыми изменениями, происходящими в блоке.
 
 // также использую MultiBlocProvider для объявления нескольких блоков,
-// В приведенном выше коде у меня есть , AuthenticationBloc который будет использоваться
+// AuthenticationBloc будет использоваться
 // для аутентификации, я также сразу добавляю событие AuthenticationStarted,
 // которое вызовет обработчик событий внутри класса Bloc. также создал FormBloc
 // для проверки формы и DatabaseBloc для операций с базой данных.
@@ -23,7 +23,6 @@ import 'auth_features/database/database_repository.dart';
 import 'auth_features/form_validation/bloc/form_bloc.dart';
 import 'bottom_navigation_bar/bottom_navigation_bar_bloc/bottom_navigation_bar_bloc.dart';
 import 'bottom_navigation_bar/bottom_navigation_bar_bloc/bottom_navigation_bar_event.dart';
-
 
 void main() async {
   await SentryFlutter.init((options) {

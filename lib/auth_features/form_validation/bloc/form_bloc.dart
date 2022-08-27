@@ -153,7 +153,7 @@ class FormBloc extends Bloc<FormEvent, FormsValidate> {
         if (updatedUser.isVerified!) {
           emit(state.copyWith(isLoading: false, errorMessage: ""));
         } else {
-          emit(state.copyWith(isFormValid: false,errorMessage: "Пожалуйста, подтвердите свой адрес электронной почты, перейдя по ссылке, отправленной вам по почте.",isLoading: false));
+          emit(state.copyWith(isFormValid: false,errorMessage: "Мы отправили вам письмо с потверждением на вашу электронную почту, пожалуйста перейдите по ссылке",isLoading: false));
         }
       } on FirebaseAuthException catch (e) {
         emit(state.copyWith(
@@ -178,7 +178,7 @@ class FormBloc extends Bloc<FormEvent, FormsValidate> {
         if (updatedUser.isVerified!) {
           emit(state.copyWith(isLoading: false, errorMessage: ""));
         } else {
-          emit(state.copyWith(isFormValid: false,errorMessage: "Пожалуйста, подтвердите свой адрес электронной почты, перейдя по ссылке, отправленной вам по почте.",isLoading: false));
+          emit(state.copyWith(isFormValid: false,errorMessage: "Мы отправили вам письмо с потверждением на вашу электронную почту, пожалуйста перейдите по ссылке.",isLoading: false));
         }
       } on FirebaseAuthException catch (e) {
         emit(state.copyWith(
