@@ -71,6 +71,7 @@ class _HomeTabViewState extends State<HomeTabView> {
             }
 
             return ListView.builder(
+              physics: const BouncingScrollPhysics(),
               itemCount: snapshot.data?.docs.length,
                 itemBuilder: (context, index) {
 
