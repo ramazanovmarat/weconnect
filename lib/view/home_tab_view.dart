@@ -36,7 +36,7 @@ class _HomeTabViewState extends State<HomeTabView> {
 
                   final picker = ImagePicker();
 
-                  picker.pickImage(source: ImageSource.gallery, imageQuality: 40).then((xFile){
+                  picker.pickImage(source: ImageSource.gallery, imageQuality: 100).then((xFile){
 
 
                     if(xFile != null) {

@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:weconnect/utils/animation_navigate.dart';
 import 'package:weconnect/view/chat_room.dart';
 import 'package:weconnect/view/create_post_view.dart';
 import 'package:weconnect/view/welcome_view.dart';
@@ -16,7 +15,6 @@ class App extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: AnimatedSplashScreen(
           curve: Curves.linear,
-          duration: 2500,
           splash: 'assets/image/wc.png',
           nextScreen: const BlocNavigate(),
           splashTransition: SplashTransition.rotationTransition,
