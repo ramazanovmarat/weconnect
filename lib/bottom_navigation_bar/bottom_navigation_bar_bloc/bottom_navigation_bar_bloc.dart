@@ -18,7 +18,7 @@ class BottomNavigationBloc extends Bloc<BottomNavigationEvent, BottomNavigationS
       if(currentIndex == 0) {
         emit(HomeViewLoaded());
       }
-      if(currentIndex == 1) {
+      if (currentIndex == 1) {
         emit(AccountViewLoaded());
       }
     });
